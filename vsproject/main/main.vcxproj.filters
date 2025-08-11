@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="face_base">
+      <UniqueIdentifier>{6f738c0e-38c7-481c-8089-cbc70f1dca9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="face_3dmm">
+      <UniqueIdentifier>{0186e381-16ba-4f5f-b014-6656e60d42be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{5be85355-2ba2-4549-a615-fe7621659526}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\face_base\face_align.cpp">
+      <Filter>face_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_base\face_detection.cpp">
+      <Filter>face_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_base\priorbox.cpp">
+      <Filter>face_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_base\xelement.cpp">
+      <Filter>face_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\main_face_masking.cpp" />
+    <ClCompile Include="..\..\source\tools\ximage.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_base\face_tracking.cpp">
+      <Filter>face_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\cvfunc.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\strfunc.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\visfunc.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\timer.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_3dmm\face_3dmm.cpp">
+      <Filter>face_3dmm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_3dmm\face_render.cpp">
+      <Filter>face_3dmm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\xarray_template.h">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\main_xarray_io.cpp" />
+    <ClCompile Include="..\..\source\tools\xarray.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\xarray_helper.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\face_3dmm\mesh_render.cpp">
+      <Filter>face_3dmm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\face_base\face_align.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_base\face_detection.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_base\face_info.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_base\priorbox.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_base\xelement.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_base\xgeometry.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\singleton.h" />
+    <ClInclude Include="..\..\source\tools\ximage.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_base\face_tracking.h">
+      <Filter>face_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\cvfunc.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\strfunc.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\visfunc.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\timer.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_3dmm\face_3dmm.h">
+      <Filter>face_3dmm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_3dmm\face_render.h">
+      <Filter>face_3dmm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\xarray.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\xarray_dtype.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\tools\xarray_helper.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\face_3dmm\mesh_render.h">
+      <Filter>face_3dmm</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
