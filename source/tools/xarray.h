@@ -24,7 +24,7 @@ public:
     // 默认构造函数
     XArray();
     // 带参数的构造函数
-    XArray(const std::vector<unsigned int>& shape, DataType type_info, void* data, bool copy_data = true);
+    XArray(const std::vector<unsigned int>& shape, DataType data_type, void* data, bool copy_data = true);
     // 析构函数
     ~XArray();
 
@@ -32,7 +32,7 @@ public:
     // 清理数据
     void clear();
     // 初始化数据
-    void initialize(const std::vector<unsigned int>& shape, DataType type_info, void* data, bool copy_data = false);
+    void initialize(const std::vector<unsigned int>& shape, DataType data_type, void* data, bool copy_data = false);
     // 获取维度数
     int dimensions() const;
     // 获取总的元素数量

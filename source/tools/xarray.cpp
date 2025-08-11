@@ -14,10 +14,10 @@ XArray::XArray() : type_info(), num_bytes(0), data(nullptr)
 }
 
 // 带参数的构造函数
-XArray::XArray(const std::vector<unsigned int>& shape, DataType type_info, void* data, bool copy_data)
+XArray::XArray(const std::vector<unsigned int>& shape, DataType data_type, void* data, bool copy_data)
     : shape(shape), num_bytes(0), data(nullptr) 
 {
-    initialize(shape, type_info, data, copy_data);
+    initialize(shape, data_type, data, copy_data);
 }
 
 // 析构函数
@@ -38,7 +38,7 @@ void XArray::clear()
     type_info = DataTypeInfo(DataType::NONE, 0, "none");
 }
 
-void XArray::initialize(const std::vector<unsigned int>& shape, DataType type_info, void* data, bool copy_data)
+void XArray::initialize(const std::vector<unsigned int>& shape, DataType data_type, void* data, bool copy_data)
 {
     clear();
 
@@ -53,7 +53,7 @@ void XArray::initialize(const std::vector<unsigned int>& shape, DataType type_in
     }
 
     // 从 DataTypeMap 获取类型信息
-    auto it = DataTypeMap.find(static_cast<uint32_t>(type_info));
+    auto it = DataTypeMap.find(static_cast<uint32_t>(data_type));
     if (it != DataTypeMap.end()) {
         this->type_info = it->second;
     }
