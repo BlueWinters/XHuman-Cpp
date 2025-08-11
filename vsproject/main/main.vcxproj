@@ -28,9 +28,9 @@
     <ClCompile Include="..\..\source\face_base\priorbox.cpp" />
     <ClCompile Include="..\..\source\face_base\xelement.cpp" />
     <ClCompile Include="..\..\source\main_face_masking.cpp" />
-    <ClCompile Include="..\..\source\main_xarray_io.cpp" />
     <ClCompile Include="..\..\source\tools\cvfunc.cpp" />
     <ClCompile Include="..\..\source\tools\strfunc.cpp" />
+    <ClCompile Include="..\..\source\tools\tester_xarray_io.cpp" />
     <ClCompile Include="..\..\source\tools\timer.cpp" />
     <ClCompile Include="..\..\source\tools\visfunc.cpp" />
     <ClCompile Include="..\..\source\tools\xarray.cpp" />

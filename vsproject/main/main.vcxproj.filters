@@ -10,6 +10,9 @@
     <Filter Include="tools">
       <UniqueIdentifier>{5be85355-2ba2-4549-a615-fe7621659526}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tools\tester">
+      <UniqueIdentifier>{f234a32c-5b19-4150-bd68-8b0b67afced7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\face_base\face_align.cpp">
@@ -52,7 +55,6 @@
     <ClCompile Include="..\..\source\tools\xarray_template.h">
       <Filter>tools</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\main_xarray_io.cpp" />
     <ClCompile Include="..\..\source\tools\xarray.cpp">
       <Filter>tools</Filter>
     </ClCompile>
@@ -61,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="..\..\source\face_3dmm\mesh_render.cpp">
       <Filter>face_3dmm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\tools\tester_xarray_io.cpp">
+      <Filter>tools\tester</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
