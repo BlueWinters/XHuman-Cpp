@@ -27,6 +27,7 @@
     <ClCompile Include="..\..\source\face_base\face_tracking.cpp" />
     <ClCompile Include="..\..\source\face_base\priorbox.cpp" />
     <ClCompile Include="..\..\source\face_base\xelement.cpp" />
+    <ClCompile Include="..\..\source\main_debug.cpp" />
     <ClCompile Include="..\..\source\main_face_masking.cpp" />
     <ClCompile Include="..\..\source\tools\cvfunc.cpp" />
     <ClCompile Include="..\..\source\tools\strfunc.cpp" />
@@ -183,6 +184,7 @@
       <ConformanceMode>false</ConformanceMode>
       <Optimization>MaxSpeed</Optimization>
       <OpenMPSupport>true</OpenMPSupport>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

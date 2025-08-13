@@ -17,11 +17,11 @@ void transformXArray2Matrix(const XArray& array, cv::Mat& mat)
         throw std::invalid_argument("Shape must be 1 or 2 dimensions.");
     }
 
-    if (array.type_info.type == DataType::FLOAT32) {
+    if (array.type_info.type == DataTypeCode::FLOAT32) {
         mat.create(rows, cols, CV_32F);
         std::memcpy(mat.data, array.data, array.num_bytes);
     }
-    else if (array.type_info.type == DataType::INT32) {
+    else if (array.type_info.type == DataTypeCode::INT32) {
         mat.create(rows, cols, CV_32S);
         std::memcpy(mat.data, array.data, array.num_bytes);
     }

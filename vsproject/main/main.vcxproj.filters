@@ -67,6 +67,7 @@
     <ClCompile Include="..\..\source\tools\tester_xarray_io.cpp">
       <Filter>tools\tester</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\source\main_debug.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\face_base\face_align.h">

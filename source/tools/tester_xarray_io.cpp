@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <string>
 #include "tools/xarray.h"
+#include "tools/xarray_template.h"
 
 
 #if 0
@@ -46,9 +47,16 @@ int main(int argc, char** argv)
     //benchmark1();
     //benchmark2();
 
-    XArrayContainer container;
-    container.load("X:\\checkpoints\\deep-3d-reconstruction\\cpp\\face_masking.bin");
-    container.printAll();
+    //XArrayContainer container;
+    //container.load("X:\\checkpoints\\deep-3d-reconstruction\\cpp\\face_masking.bin");
+    //container.printAll();
+
+
+    // 创建int32类型的数组 (类型代码41)
+    XArrayInt32 int32Array;
+
+
+    return 0;
 
 
 #ifdef _MSC_VER

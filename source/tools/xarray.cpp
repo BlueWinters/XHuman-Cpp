@@ -14,10 +14,10 @@ XArray::XArray() : type_info(), num_bytes(0), data(nullptr)
 }
 
 // 带参数的构造函数
-XArray::XArray(const std::vector<unsigned int>& shape, DataType data_type, void* data, bool copy_data)
+XArray::XArray(const std::vector<unsigned int>& shape, DataTypeCode data_type_code, void* data, bool copy_data)
     : shape(shape), num_bytes(0), data(nullptr) 
 {
-    initialize(shape, data_type, data, copy_data);
+    initialize(shape, data_type_code, data, copy_data);
 }
 
 // 析构函数
@@ -35,10 +35,10 @@ void XArray::clear()
     }
     shape.clear();
     num_bytes = 0;
-    type_info = DataTypeInfo(DataType::NONE, 0, "none");
+    type_info = DataTypeInfo(DataTypeCode::NONE, 0, "none");
 }
 
-void XArray::initialize(const std::vector<unsigned int>& shape, DataType data_type, void* data, bool copy_data)
+void XArray::initialize(const std::vector<unsigned int>& shape, DataTypeCode data_type_code, void* data, bool copy_data)
 {
     clear();
 
@@ -53,7 +53,7 @@ void XArray::initialize(const std::vector<unsigned int>& shape, DataType data_ty
     }
 
     // 从 DataTypeMap 获取类型信息
-    auto it = DataTypeMap.find(static_cast<uint32_t>(data_type));
+    auto it = DataTypeMap.find(static_cast<uint32_t>(data_type_code));
     if (it != DataTypeMap.end()) {
         this->type_info = it->second;
     }
@@ -177,25 +177,25 @@ void XArray::printElement(size_t index) const
     char* ptr = static_cast<char*>(data) + index * element_size;
 
     switch (type_info.type) {
-    case DataType::FLOAT32:
+    case DataTypeCode::FLOAT32:
         std::cout << *reinterpret_cast<float*>(ptr);
         break;
-    case DataType::FLOAT64:
+    case DataTypeCode::FLOAT64:
         std::cout << *reinterpret_cast<double*>(ptr);
         break;
-    case DataType::INT32:
+    case DataTypeCode::INT32:
         std::cout << *reinterpret_cast<int*>(ptr);
         break;
-    case DataType::INT64:
+    case DataTypeCode::INT64:
         std::cout << *reinterpret_cast<int64_t*>(ptr);
         break;
-    case DataType::UINT8:
+    case DataTypeCode::UINT8:
         std::cout << static_cast<int>(*reinterpret_cast<uint8_t*>(ptr));
         break;
-    case DataType::INT16:
+    case DataTypeCode::INT16:
         std::cout << *reinterpret_cast<int16_t*>(ptr);
         break;
-    case DataType::FLOAT16:
+    case DataTypeCode::FLOAT16:
         throw std::runtime_error("Not implement error");
         break;
     default:
@@ -495,7 +495,7 @@ bool XArrayContainer::load(const std::string& path)
         // 设置数据类型信息
         uint32_t dtype_code;
         file.read(reinterpret_cast<char*>(&dtype_code), sizeof(dtype_code));
-        DataType type = static_cast<DataType>(dtype_code);
+        DataTypeCode type = static_cast<DataTypeCode>(dtype_code);
 
         // 检查类型映射是否存在
         auto it = DataTypeMap.find(dtype_code);
